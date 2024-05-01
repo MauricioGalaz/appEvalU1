@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">appEvalU!</string>
+    <string name="pastel_de_choclo">Pastel de Choclo</string>
+    <string name="cazuela">Cazuela</string>
+    <string name="cant">Cantidad</string>
+    <string name="propina">Propina</string>
+    <string name="comida">Comida</string>
+    <string name="total">Total</string>
+    <string name="Cantidad">Cannot</string>
+    <string name="cantidad_pastel_de_choclo">Cantidad Pastel de Choclo</string>
+    <string name="cantidad_cazuela">Cantidad Cazuela</string>
+    <string name="incluir_propina">Incluir propina</string>
+    <string name="precio_pastel_0">Precio Pastel: $0</string>
+    <string name="precio_cazuela_0">Precio Cazuela: $0</string>
+    <string name="label_subtotal">Subtotal: %1$d</string>
+    <string name="label_propina">Propina: %1$.2f</string>
+    <string name="label_total">Total: %1$.2f</string>
+    <string name="todo">TODO</string>
+    <string name="Todo">TODO</string>
+    <string name="imagen">TODO</string>
+    <string name="subtotal_0" />
+    <string name="propina_0" />
+    <string name="total_0" />
+    <string name="neto">Neto</string>
+    <string name="totale">Total</string>
+
+
+</resources>

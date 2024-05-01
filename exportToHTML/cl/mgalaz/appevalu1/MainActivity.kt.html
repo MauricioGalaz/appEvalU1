@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">cl</span><span class="s2">.</span><span class="s1">mgalaz</span><span class="s2">.</span><span class="s1">appevalu1</span>
+
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Parcel</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Parcelable</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">enableEdgeToEdge</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">appcompat</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewCompat</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">WindowInsetsCompat</span>
+
+<span class="s0">class </span><span class="s1">MainActivity</span><span class="s2">() </span><span class="s1">: AppCompatActivity</span><span class="s2">(), </span><span class="s1">Parcelable </span><span class="s2">{</span>
+    <span class="s1">constructor</span><span class="s2">(</span><span class="s1">parcel: Parcel</span><span class="s2">) </span><span class="s1">: </span><span class="s0">this</span><span class="s2">() {</span>
+    <span class="s2">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
+        <span class="s1">enableEdgeToEdge</span><span class="s2">()</span>
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s2">)</span>
+        <span class="s1">ViewCompat</span><span class="s2">.</span><span class="s1">setOnApplyWindowInsetsListener</span><span class="s2">(</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">main</span><span class="s2">)) { </span><span class="s1">v</span><span class="s2">, </span><span class="s1">insets </span><span class="s2">-&gt;</span>
+            <span class="s0">val </span><span class="s1">systemBars </span><span class="s2">= </span><span class="s1">insets</span><span class="s2">.</span><span class="s1">getInsets</span><span class="s2">(</span><span class="s1">WindowInsetsCompat</span><span class="s2">.</span><span class="s1">Type</span><span class="s2">.</span><span class="s1">systemBars</span><span class="s2">())</span>
+            <span class="s1">v</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">left</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">top</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">right</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">bottom</span><span class="s2">)</span>
+            <span class="s1">insets</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">writeToParcel</span><span class="s2">(</span><span class="s1">parcel: Parcel</span><span class="s2">, </span><span class="s1">flags: Int</span><span class="s2">) {</span>
+
+    <span class="s2">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">describeContents</span><span class="s2">()</span><span class="s1">: Int </span><span class="s2">{</span>
+        <span class="s0">return </span><span class="s3">0</span>
+    <span class="s2">}</span>
+
+    <span class="s1">companion </span><span class="s0">object </span><span class="s1">CREATOR : Parcelable</span><span class="s2">.</span><span class="s1">Creator</span><span class="s2">&lt;</span><span class="s1">MainActivity</span><span class="s2">&gt; {</span>
+        <span class="s1">override </span><span class="s0">fun </span><span class="s1">createFromParcel</span><span class="s2">(</span><span class="s1">parcel: Parcel</span><span class="s2">)</span><span class="s1">: MainActivity </span><span class="s2">{</span>
+            <span class="s0">return </span><span class="s1">MainActivity</span><span class="s2">(</span><span class="s1">parcel</span><span class="s2">)</span>
+        <span class="s2">}</span>
+
+        <span class="s1">override </span><span class="s0">fun </span><span class="s1">newArray</span><span class="s2">(</span><span class="s1">size: Int</span><span class="s2">)</span><span class="s1">: Array</span><span class="s2">&lt;</span><span class="s1">MainActivity?</span><span class="s2">&gt; {</span>
+            <span class="s0">return </span><span class="s1">arrayOfNulls</span><span class="s2">(</span><span class="s1">size</span><span class="s2">)</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">Editable</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">TextWatcher</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.*</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity</span><span class="s2">() {</span>
+
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">tvPastel: EditText</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">tvCazuela: EditText</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">valorPropina: EditText</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">numSubtotalComida: TextView</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">textViewPropina: TextView</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">textViewTotal: TextView</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s2">)</span>
+
+        <span class="s1">tvPastel </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">tvPastel</span><span class="s2">)</span>
+       <span class="s1">tvCazuela</span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">tvCazuela</span><span class="s2">)</span>
+       <span class="s1">valorPropina </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">botvalorPropina</span><span class="s2">)</span>
+         <span class="s1">numSubtotalComida </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">numComida</span><span class="s2">)</span>
+        <span class="s1">textViewPropina </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">numPropina</span><span class="s2">)</span>
+        <span class="s1">textViewTotal </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">numTotal</span><span class="s2">)</span>
+
+        <span class="s1">editTextNumber5</span><span class="s2">.</span><span class="s1">addTextChangedListener</span><span class="s2">(</span><span class="s0">object </span><span class="s1">: TextWatcher </span><span class="s2">{</span>
+            <span class="s1">override </span><span class="s0">fun </span><span class="s1">afterTextChanged</span><span class="s2">(</span><span class="s1">s: Editable?</span><span class="s2">) {</span>
+                <span class="s1">actualizarTotales</span><span class="s2">()</span>
+            <span class="s2">}</span>
+            <span class="s1">override </span><span class="s0">fun </span><span class="s1">beforeTextChanged</span><span class="s2">(</span><span class="s1">s: CharSequence?</span><span class="s2">, </span><span class="s1">start: Int</span><span class="s2">, </span><span class="s1">count: Int</span><span class="s2">, </span><span class="s1">after: Int</span><span class="s2">) {}</span>
+            <span class="s1">override </span><span class="s0">fun </span><span class="s1">onTextChanged</span><span class="s2">(</span><span class="s1">s: CharSequence?</span><span class="s2">, </span><span class="s1">start: Int</span><span class="s2">, </span><span class="s1">before: Int</span><span class="s2">, </span><span class="s1">count: Int</span><span class="s2">) {}</span>
+        <span class="s2">})</span>
+
+        <span class="s0">val </span><span class="s1">valorCazuela</span><span class="s2">.</span><span class="s1">addTextChangedListener</span><span class="s2">(</span><span class="s0">object </span><span class="s1">: TextWatcher </span><span class="s2">{</span>
+            <span class="s1">override </span><span class="s0">fun </span><span class="s1">afterTextChanged</span><span class="s2">(</span><span class="s1">s: Editable?</span><span class="s2">) {</span>
+                <span class="s1">actualizarTotales</span><span class="s2">()</span>
+            <span class="s2">}</span>
+            <span class="s1">override </span><span class="s0">fun </span><span class="s1">beforeTextChanged</span><span class="s2">(</span><span class="s1">s: CharSequence?</span><span class="s2">, </span><span class="s1">start: Int</span><span class="s2">, </span><span class="s1">count: Int</span><span class="s2">, </span><span class="s1">after: Int</span><span class="s2">) {}</span>
+            <span class="s1">override </span><span class="s0">fun </span><span class="s1">onTextChanged</span><span class="s2">(</span><span class="s1">s: CharSequence?</span><span class="s2">, </span><span class="s1">start: Int</span><span class="s2">, </span><span class="s1">before: Int</span><span class="s2">, </span><span class="s1">count: Int</span><span class="s2">) {}</span>
+        <span class="s2">})</span>
+
+        <span class="s0">val </span><span class="s1">onCheckedChangeListener </span><span class="s2">= </span><span class="s1">switchPropina</span><span class="s2">.</span><span class="s1">setOnCheckedChangeListener </span><span class="s2">{ </span><span class="s1">_</span><span class="s2">, </span><span class="s1">isChecked </span><span class="s2">-&gt; </span><span class="s1">actualizarTotales</span><span class="s2">() }</span>
+    <span class="s2">}</span>
+
+    <span class="s1">private </span><span class="s0">fun </span><span class="s1">actualizarTotales</span><span class="s2">() {</span>
+        <span class="s0">val </span><span class="s1">cantidadPastel </span><span class="s2">= </span><span class="s1">editTextPastel</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">toString</span><span class="s2">().</span><span class="s1">toIntOrNull</span><span class="s2">() </span><span class="s1">?: </span><span class="s3">0</span>
+        <span class="s0">val </span><span class="s1">cantidadCazuela </span><span class="s2">= </span><span class="s1">editTextCazuela</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">toString</span><span class="s2">().</span><span class="s1">toIntOrNull</span><span class="s2">() </span><span class="s1">?: </span><span class="s3">0</span>
+        <span class="s0">val </span><span class="s1">subtotalPastel </span><span class="s2">= </span><span class="s1">cantidadPastel </span><span class="s2">* </span><span class="s3">12000</span>
+        <span class="s0">val </span><span class="s1">subtotalCazuela </span><span class="s2">= </span><span class="s1">cantidadCazuela </span><span class="s2">* </span><span class="s3">10000</span>
+        <span class="s0">val </span><span class="s1">subtotal </span><span class="s2">= </span><span class="s1">subtotalPastel </span><span class="s2">+ </span><span class="s1">subtotalCazuela</span>
+        <span class="s0">val </span><span class="s1">propina </span><span class="s2">= </span><span class="s0">if </span><span class="s2">(</span><span class="s1">switchPropina</span><span class="s2">.</span><span class="s1">isChecked</span><span class="s2">) </span><span class="s1">subtotal </span><span class="s2">* </span><span class="s3">0.1 </span><span class="s0">else </span><span class="s3">0</span>
+        <span class="s0">val </span><span class="s1">total </span><span class="s2">= </span><span class="s1">subtotal </span><span class="s2">+ </span><span class="s1">propina</span>
+
+        <span class="s1">numSubtotalComida</span><span class="s2">.</span><span class="s1">text </span><span class="s2">= </span><span class="s4">&quot;Subtotal: $</span><span class="s0">${</span><span class="s1">subtotal</span><span class="s0">}</span><span class="s4">&quot;</span>
+        <span class="s1">textViewPropina</span><span class="s2">.</span><span class="s1">text </span><span class="s2">= </span><span class="s4">&quot;Propina: $</span><span class="s0">${</span><span class="s1">propina</span><span class="s0">}</span><span class="s4">&quot;</span>
+        <span class="s1">textViewTotal</span><span class="s2">.</span><span class="s1">text </span><span class="s2">= </span><span class="s4">&quot;Total: $</span><span class="s0">${</span><span class="s1">total</span><span class="s0">}</span><span class="s4">&quot;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
